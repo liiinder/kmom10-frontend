@@ -126,7 +126,7 @@ export default {
                 deposit: this.deposit,
                 // password: this.password
             }, {
-                headers: {'x-access-token': this.$store.getters.getToken}                
+                headers: {'x-access-token': this.$store.getters.getToken}
             }).then(response => {
                 this.message = response.data.msg;
                 this.$store.dispatch('setUser', response.data.user);
