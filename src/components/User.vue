@@ -133,6 +133,9 @@ export default {
                 this.deposit = "";
             }).catch(e => {
                 // console.log("e: " + JSON.stringify(e));
+                if (e.response.data.msg == "Invalid Token") {
+                    this.logout();
+                }
                 this.message = e.response.data.msg;
             });
         },

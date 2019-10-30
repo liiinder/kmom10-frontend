@@ -57,6 +57,11 @@ export default {
         }
     },
     methods: {
+        logout() {
+            this.$store.dispatch('setUser', "");
+            this.$store.dispatch('setToken', "");
+            this.$router.push('Login');
+        },
         formatDate(date) {
             let d = new Date(date);
 
@@ -80,6 +85,9 @@ export default {
                 this.$store.dispatch('setUser', response.data.user);
             }).catch(e => {
                 // console.log("e: " + JSON.stringify(e));
+                if (e.response.data.msg == "Invalid Token") {
+                    this.logout();
+                }
                 this.message = e.response.data.msg;
             });
         },

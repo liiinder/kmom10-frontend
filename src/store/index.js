@@ -7,8 +7,8 @@ export default new Vuex.Store({
     state: {
         token: "",
         user: {},
-        apiURL: "http://localhost:1338"
-        // apiURL: "https://backend.liiinder.me"
+        // apiURL: "http://localhost:1338"
+        apiURL: "https://backend.liiinder.me"
     },
 
     mutations: { // syncronus
