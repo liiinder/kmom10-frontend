@@ -151,7 +151,7 @@ export default {
                 company: brand,
                 amount: amount
             }, {
-                headers: {'x-access-token': this.$store.getters.getToken+"ad"}
+                headers: {'x-access-token': this.$store.getters.getToken}
             }).then(response => {
                 this.$store.dispatch('setUser', response.data.user);
                 this.message = response.data.msg;
