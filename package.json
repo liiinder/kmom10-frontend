@@ -9,7 +9,7 @@
     "deploy": "npm run build && rsync -av dist/* deploy@liiinder.me:/var/www/frontend.liiinder.me/html/"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "core-js": "^3.1.2",
     "socket.io-client": "^2.3.0",
